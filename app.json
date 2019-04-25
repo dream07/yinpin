@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "miniprogram_npm/vant-weapp/search/index",
+    "pages/logs/logs",
+    "pages/bofang/bofang"
+    
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#834129",
+    "navigationBarTitleText": "承易启慧",
+    "navigationBarTextStyle": "white"
+    
+  }
+  
+  
+    
+}

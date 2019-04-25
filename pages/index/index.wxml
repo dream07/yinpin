@@ -1,0 +1,57 @@
+<scroll-view class="list" bindscrolltolower="scrollLoadMore" scroll-y="true" style="transform: translateX({{translate}}px)">
+
+  <!-- <van-button type="primary">主要按钮</van-button> -->
+  <van-search value="{{ value }}" placeholder="请输入您要听的故事" shape="round" class="custom-class field-class cancel-class input-class" input-align='left' background='' bind:search bind:change use-action-slot>
+    <view slot="action" bind:tap="onSearch" style='margin-top:8rpx'>搜索</view>
+  </van-search>
+  <view wx:for="{{search === false? audioList : searchAudioList}}" wx:key="{{item.testid}}" class='page-content'>
+    <view id="{{index}}" wx:if="{{show}}" class="list-one {{item.testid === audioIndex ? 'list-one-choose' : ''}}" bindtap="bindTapChoose" data-testid="{{item.testid}}">
+      <view class="name">
+        <text class="list-index">{{index + 1}}</text>
+      </view>
+      <view>
+        <image class="list-one-poster" src="{{item.poster}}"></image>
+      </view>
+      <view class="list-one-right">
+        <view class="list-name">{{item.name}}</view>
+        <!--<view class="author">歌手：{{item.author}}</view>-->
+      </view>
+      
+      <image src="{{item.testid === audioIndex && pauseStatus==false ? '../../assets/hong/d8fVbWyW.gif' : '../../assets/icon_o44xsic1xne/bofang.png'}}" class='active' catchtap="bindTapChooseButton" data-imageid="{{item.testid}}" style="{{pauseStatus === true && item.testid === audioIndex ? 'width:60rpx;height:60rpx' : ''}}"></image>
+      
+    </view>
+  </view>
+  <!-- <loading hidden="{{loadHidden}}" bindchange="loadingChange">
+      加载中...
+    </loading> -->
+  <!-- <view class="tips1" hidden="{{loadHidden}}">
+      <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+        <icon type="waiting" size="20" />
+        <text>玩命的加载中...</text>
+      </view>
+      <view wx:else>
+        <text>没有更多内容了</text>
+      </view>
+    </view> -->
+</scroll-view>
+<view class='faceplate'>
+  <navigator url='../../pages/bofang/bofang' class='skip' hover-class="none">
+    <view class='circle'>
+      <image src='{{audioList[audioIndex].poster}}'></image>
+    </view>
+    <view class="faceplateText">
+      <text class="faceplateName">
+        {{audioList[audioIndex].name}}
+    </text>
+    </view>
+  </navigator>
+
+  <view class='control'>
+    <image bindtap="bindTapPrev" class="icon-prev" src="../../assets/hong/shangyishou.png">
+    </image>
+    <image src="{{pauseStatus === true? '../../assets/hong/bofang.png' : '../../assets/hong/suspend_icon.png'}}" bindtap="bindTapPlay" class="icon-play" >
+    </image>
+    <image bindtap="bindTapNext" class="icon-next" src="../../assets/hong/xiayishou.png">
+    </image>
+  </view>
+</view>

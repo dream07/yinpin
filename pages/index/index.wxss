@@ -1,0 +1,247 @@
+page {
+  padding-bottom: 130rpx;
+}
+.active {
+  width: 60rpx;
+  height: 60rpx;
+}
+.playButton {
+  width: 65rpx;
+  height: 65rpx;
+}
+/*5*/
+.list{
+  box-sizing: border-box;
+  position: absolute;
+  top: -1rpx;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  z-index: 9;
+  /* background-image: url('http://www.cyqhvip.com/static/index/images/15G58PIC56A_1024.jpg'); */
+  background-color: #000;
+  /* http://www.cyqhvip.com/static/index/images/1_03.png
+  http://www.cyqhvip.com/static/index/images/zjp.jpg
+  http://www.cyqhvip.com/static/index/images/slide_04_2000x410.jpg */
+/* 15G58PIC56A_1024.jpg */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* overflow: hidden; */
+  padding-top: 108rpx;
+  
+}
+::-webkit-scrollbar
+{
+width: 6px;
+height: 6px;
+/* background-color: transparent; */
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+/* -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); */
+/* border-radius: 10px; */
+/* background-color: yellow; */
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+/* background-color: #ff5500; */
+}
+
+.list-one{
+  height: 160rpx;
+  display: flex;
+  padding: 0 30rpx;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list-one-poster{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.list-one-right{
+  width: 70%;
+  margin: 0 0 0 30rpx;
+}
+.list-one-choose{
+  /* background-color: rgba(54, 43, 41, 0.6); */
+  color: #E23B34;
+}
+.list-index{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #c2c2c2;
+  text-align: center;
+  border-radius: 60rpx;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  color: #fff;
+}
+.list-name {
+  font-size: 48rpx;
+}
+.page-top .list-icon{
+  position: absolute;
+  width: 68rpx;
+  height: 38rpx;
+  padding: 20rpx 20rpx 20rpx 8rpx ;
+  left: 20rpx;
+  top: 60rpx;
+  z-index: 101;
+}
+.line {
+  margin: 10rpx auto 0;
+  width: 300rpx;
+  height: 100rpx;
+  /* background-image: url('http://127.0.0.1:4455/16pic_7719006_b.jpg');
+   background-position-y: 15rpx;
+  background-position-x: 580rpx; */
+}
+movable-area {
+  height: 100%;
+  width: 750rpx;
+}
+.user{
+position: absolute;
+top: 75rpx;
+right: 30rpx;
+ width: 68rpx;
+ height: 68rpx; 
+ z-index: 999999;
+}
+.custom-class {
+  color: #fff !important;
+}
+van-search{
+  height: 64rpx
+}
+.input-class {
+  height: 74rpx;
+}
+.field-class {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff !important;
+}
+.cancel-class {
+}
+.faceplate {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding:20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height:130rpx;
+  background-color: #CF9237;
+  /* border-top: 1px solid rgba(0,0,0,.5); */
+  box-shadow: 0px -1px 1px #aa7008; 
+  z-index: 99999;
+}
+.circle {
+  width: 110rpx;
+  height: 110rpx;
+}
+.circle image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.faceplateText {
+  width: 211rpx;
+  margin: 7rpx  0 0 30rpx;
+  box-sizing: border-box;
+  padding-bottom: 5rpx;
+  height: 100%;
+  line-height: 31rpx;
+  font-size: 36rpx;
+  color: #834129;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon-prev{
+  /* background-image: url('../../assets/hui/48shangyishou.png'); */
+  /* background-repeat: no-repeat;
+  background-position: -76px -153px; */
+  width: 80rpx;
+  height: 80rpx;
+}
+.icon-play{
+  /*background-image: url('../../assets/bai/048caozuo_xiayishou.png');
+  background-repeat: no-repeat;
+  background-position: -136px -153px;*/
+  margin: 0rpx 25rpx 0rpx 25rpx;
+  width: 98rpx;
+  height: 98rpx;
+  transform: translateY(3px)
+}
+.icon-pause{
+  /*background-image: url('../../assets/img/icon.png');
+  background-repeat: no-repeat;
+  background-position: -178px -193px;*/
+  margin: 0 20rpx;
+  width: 98rpx;
+  height: 98rpx;
+}
+.icon-next{
+  /*background-image: url('../../assets/img/icon.png');
+  background-repeat: no-repeat;
+  background-position: -204px -154px;*/
+  width: 80rpx;
+  height: 80rpx;
+}
+.control {
+  /* width:140rpx; */
+  position: absolute;
+  right: 0;
+  bottom: 1;
+  margin-right: 25rpx;
+}
+.skip {
+  display: flex;
+  width: 350rpx;
+}
+
+/* .control image {
+  float: left;
+} */
+/* .sch {
+  display: block;
+  width: 100%;
+  height: 24px;
+  min-height: 24px;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  color: #333;
+  text-align: left;
+  background-color: initial;
+  border: 0;
+  box-sizing: border-box;
+  resize: none;
+} */
+/* .question{
+  position:fixed;
+  justify-content:flex-end;
+  display:flex;
+  width:100%;
+  padding-right:60rpx;
+  font-size:12px;
+  color:#fff;
+} */
+/* .blue-pre {
+  
+} */

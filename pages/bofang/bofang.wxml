@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+  <!--第一层层：背景图背景图，高斯模糊-->
+
+  <!--<audio id="audio" src="{{audioList[audioIndex].src}}" style="display: none"></audio>-->
+  <!--导航操作-->
+  <!--第三层：player层-->
+  <view style="" class="page-top" style="{{translate}}" class="page-top">
+
+    <view class="text">
+      <text class="name">
+  {{audioList[audioIndex].name}}
+  </text>
+      <!-- <view class='line'></view> -->
+
+      <!--<view><text class="author">-- {{audioList[audioIndex].author}} --</text></view>-->
+    </view>
+
+
+    
+    <!--旋转图-->
+    <view class="rotate-disk-container">
+      <view class="rotate-disk {{pauseStatus === false ? 'rotate-360' : 'rotate-360-paused'}}">
+        <image class="poster" src="{{audioList[audioIndex].poster}}" binderror="binderrorimg" data-errorimg="{{audioIndex}}"></image>
+      </view>
+    </view>
+    <view class="slider-container">
+      <text class="slider-time">{{currentPosition === 0 ? '00:00' : currentPosition}}</text>
+      <slider value="{{sliderValue}}" bindchange="bindSliderchange" activeColor="#fff" style="width: 62%;margin: 0;" block-size="22" block-color="#fefefe" backgroundColor="#999" />
+      <text class="slider-time">{{duration === 0 ? '00:00' : duration}}</text>
+    </view>
+    <view class="operation-container">
+      <view>
+        <image src="{{prev === false ? '../../assets/bai/48shangyishou.png' : '../../assets/bai/48shangyishou.png'}}" class="icon-prev" bindtap="bindTapPrev"></image>
+        <image src="{{pauseStatus === false ? '../../assets/bai/zanting.png' : '../../assets/bai/bofang_1.png'}}" class="icon-play" bindtap="bindTapPlay">
+        </image>
+        <image src="../../assets/bai/49xiayishou.png" class="icon-next" bindtap="bindTapNext"></image>
+        <image src="{{like === false ? '../../assets/bai/xihuan.png' : '../../assets/bai/iconfontxihuan2.png'}}"  class="download" bindtap="bindTapLike"></image>
+        <image src="{{(circulation === true ? '../../assets/bai/xunhuanbofang.png' : (circulation == false? '../../assets/bai/danquxunhuan.png' : '../../assets/bai/suijibofang.png'))}}"class="random" catchtap='binTapCirculation'></image>
+      </view>
+
+      <!-- <view class='question' bindtap='goQuestion'><text>问卷</text></view> -->
+
+    </view>
+
+    <view class="bg">
+      <image class="poster" mode="scaleToFill" src="{{audioList[audioIndex].poster}}" binderror="binderrorimg" data-errorimg="{{audioIndex}}"></image>
+    </view>
+    <!--第二层层：灰色蒙层-->
+    <view class="bg-gray">
+    </view>
+  </view>
+
+
+  <!--第五层：列表页-->
+</view>
