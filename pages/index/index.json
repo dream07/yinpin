@@ -2,6 +2,6 @@
   "usingComponents": {
     "van-search": "/miniprogram_npm/vant-weapp/search/index"
   },
-  "navigationBarTitleText": "中医故事屋"
-    
+  "navigationBarTitleText": "中医故事屋",
+  "disableScroll": true
 }

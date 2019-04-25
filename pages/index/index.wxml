@@ -1,9 +1,14 @@
+<view class='demo'>
+  <van-search value="{{ value }}" placeholder="请输入您要听的故事" shape="round" class="custom-class field-class cancel-class input-class" input-align='left' background='' bind:search bind:change use-action-slot>
+
+    <view slot="action" bind:tap="onSearch" style='margin-top:8rpx'>搜索</view>
+  </van-search>
+</view>
+
 <scroll-view class="list" bindscrolltolower="scrollLoadMore" scroll-y="true" style="transform: translateX({{translate}}px)">
 
   <!-- <van-button type="primary">主要按钮</van-button> -->
-  <van-search value="{{ value }}" placeholder="请输入您要听的故事" shape="round" class="custom-class field-class cancel-class input-class" input-align='left' background='' bind:search bind:change use-action-slot>
-    <view slot="action" bind:tap="onSearch" style='margin-top:8rpx'>搜索</view>
-  </van-search>
+
   <view wx:for="{{search === false? audioList : searchAudioList}}" wx:key="{{item.testid}}" class='page-content'>
     <view id="{{index}}" wx:if="{{show}}" class="list-one {{item.testid === audioIndex ? 'list-one-choose' : ''}}" bindtap="bindTapChoose" data-testid="{{item.testid}}">
       <view class="name">
@@ -16,9 +21,9 @@
         <view class="list-name">{{item.name}}</view>
         <!--<view class="author">歌手：{{item.author}}</view>-->
       </view>
-      
+
       <image src="{{item.testid === audioIndex && pauseStatus==false ? '../../assets/hong/d8fVbWyW.gif' : '../../assets/icon_o44xsic1xne/bofang.png'}}" class='active' catchtap="bindTapChooseButton" data-imageid="{{item.testid}}" style="{{pauseStatus === true && item.testid === audioIndex ? 'width:60rpx;height:60rpx' : ''}}"></image>
-      
+
     </view>
   </view>
   <!-- <loading hidden="{{loadHidden}}" bindchange="loadingChange">

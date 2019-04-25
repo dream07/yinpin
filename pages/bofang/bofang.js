@@ -94,10 +94,10 @@ Page({
 
   onLoad: function (options) {
     
-    // console.log(backgroundAudioManager.paused)
+    console.log(backgroundAudioManager.paused)
 
-    // let that = this
-    // console.log(Math.floor(Math.random() * 20))
+    let that = this
+    console.log(Math.floor(Math.random() * 20))
 
     // wx.getNetworkType({
     //   success(res) {
@@ -107,19 +107,19 @@ Page({
     //     console.log(that.data.networkType)
     //   }
     // })
-     if (backgroundAudioManager.paused == false && this.data.pauseStatus == true) {
-      this.setData({
-        onloadPlay: true,
-        pauseStatus: false
-      })
-      backgroundAudioManager.seek((backgroundAudioManager.currentTime) + 0.7)
-      let that = this
+    //  if (backgroundAudioManager.paused == false && this.data.pauseStatus == true) {
+    //   this.setData({
+    //     onloadPlay: true,
+    //     pauseStatus: false
+    //   })
+    //   backgroundAudioManager.seek((backgroundAudioManager.currentTime) + 0.7)
+    //   let that = this
 
-      setInterval(function () {
-        that.setDuration(that)
-      }, 11)
+    //   setInterval(function () {
+    //     that.setDuration(that)
+    //   }, 11)
 
-    }
+    // }
     console.log(backgroundAudioManager.paused)
     wx.onNetworkStatusChange(function (res) {
       that.setData({

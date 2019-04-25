@@ -1,5 +1,11 @@
 page {
-  padding-bottom: 130rpx;
+  /* padding-bottom: 130rpx; */
+  /* overflow: hidden; */
+  background-image: url('http://www.cyqhvip.com/image/15G58PIC56A_1024.jpg');
+  background-repeat: no-repeat;
+  /* background-repeat:round; */
+  background-size: 100% 100%;
+  /* padding-bottom: 100px; */
 }
 .active {
   width: 60rpx;
@@ -13,22 +19,23 @@ page {
 .list{
   box-sizing: border-box;
   position: absolute;
-  top: -1rpx;
+  top: 57.6px;
+  left:0;
   height: 100%;
   width: 100%;
   color: #fff;
   z-index: 9;
-  /* background-image: url('http://www.cyqhvip.com/static/index/images/15G58PIC56A_1024.jpg'); */
-  background-color: #000;
+  /* background-image: url('http://www.cyqhvip.com/image/15G58PIC56A_1024.jpg'); */
+  /* background-color: #000; */
   /* http://www.cyqhvip.com/static/index/images/1_03.png
   http://www.cyqhvip.com/static/index/images/zjp.jpg
   http://www.cyqhvip.com/static/index/images/slide_04_2000x410.jpg */
 /* 15G58PIC56A_1024.jpg */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% 100%; */
   /* overflow: hidden; */
-  padding-top: 108rpx;
-  
+  /* padding-top: 108rpx; */
+  /* padding-bottom: 10px; */
 }
 ::-webkit-scrollbar
 {
@@ -116,8 +123,21 @@ right: 30rpx;
  height: 68rpx; 
  z-index: 999999;
 }
+.demo {
+  width: 100%;
+  height:57.6px;
+  overflow: hidden;
+  /* background-image: url('http://www.cyqhvip.com/image/15G58PIC56A_1024.jpg'); */
+  /* background-position: 0px 200px;  */
+  /* background-color: transparent; */
+
+}
 .custom-class {
+  position: fixed;
+  top: 0;
+  left: 0;
   color: #fff !important;
+  z-index: 99999999;
 }
 van-search{
   height: 64rpx
@@ -127,17 +147,14 @@ van-search{
 }
 .field-class {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   color: #fff !important;
 }
 .cancel-class {
 }
 .faceplate {
-  position: fixed;
+  /* position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   padding:20rpx;
   box-sizing: border-box;
   display: flex;
